@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "Alterday";
+    src: url("../assets/fonts/Alterday.otf") format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "FortalesiaScript";
+    src: url("../assets/fonts/FortalesiaScript.otf") format(truetype);
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.aboutLeftContainer {
+    margin: 10% 5% 0 5%;
+}
+
+.aboutDescription span {
+    font-family: FortalesiaScript;
+    font-size: 200px;
+}
+
+.aboutDescription p {
+    font-family: Alterday;
+    font-size: 50px;
+}
+.aboutDescription p:first-child {
+    text-align: center;
+}
+.aboutDescription p:last-child {
+    text-align: right;
+}
+
+

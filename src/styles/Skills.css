@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.SkillsContainer{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    margin: 0 5%;
+}
+
+.SkillsLeftContainer {
+    width: 100%;
+    margin: 5% 0 5% 5%;
+}
+
+.SkillsRightContainer {
+    margin: 5% 5% 5% 0;
+    width: 100%;
+    align-content: center;
+}
+
+.logos ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: calc(20%);
+}
+
+.logos ul li {
+    list-style: none;
+    justify-items: center;
+}
+
+.logos ul li img{
+    width: 90px;
+}
+
+.description {
+    border-right: 2px solid orange;
+    align-content: center;
+    align-items: center;
+}
+
+.skillProgress {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.skillProgress .child{
+    display: inline-flex;
+    align-items: center;
+
+}
+
+.skillProgress .child img {
+    width: 75px;
+}
+
+.skillProgress .child progress {
+  /* width: 100%; */
+  height: 25%;
+  appearance: none;
+}
+
+/* Progress bar background */
+.skillProgress .child progress::-webkit-progress-bar {
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+/* Progress value (filled part) */
+.skillProgress .child progress::-webkit-progress-value {
+  background-color: rgb(89, 245, 45);
+  border-radius: 10px;
+}
+
+/* Firefox support */
+.skillProgress .child progress::-moz-progress-bar {
+  background-color: green;
+  border-radius: 10px;
+}
