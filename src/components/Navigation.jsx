@@ -5,7 +5,9 @@ export default function Navigation() {
   return (
     <nav>
       <div className="Home" id="Home">
-        <h1>Portfolio</h1>
+        <h1>
+          <a href="#">Portfolio</a>
+        </h1>
       </div>
 
       <div className="Pages" id="Pages">

@@ -15,10 +15,11 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 .aboutLeftContainer {
-    margin: 10% 5% 0 5%;
+    padding: 10% 5%;
 }
 
 .aboutDescription span {
@@ -29,6 +30,7 @@
 .aboutDescription p {
     font-family: Alterday;
     font-size: 50px;
+    
 }
 .aboutDescription p:first-child {
     text-align: center;

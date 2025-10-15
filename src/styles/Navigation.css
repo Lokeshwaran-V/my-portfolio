@@ -13,6 +13,12 @@ nav {
 .Home {
     flex: 0 0 auto;
     margin: 0;
+    text-decoration: none;
+}
+
+.Home a {
+    text-decoration: none;
+    color: black;
 }
 
 .Pages ul {

@@ -1,0 +1,40 @@
+.experienceContainer {
+    display: flex;
+    position: relative;
+    justify-content: left;
+    margin: 0 5%;
+}
+
+.experienceLeftContainer {
+    width: 30%;
+    margin: 5% 0 5% 5%;
+    border-right: 2px solid orange;
+}
+
+.experienceImage {
+    justify-items: center;
+    align-content: center;
+}
+.experienceImage img{
+    width: 80%;
+}
+
+.experienceRightContainer {
+    margin: 5% 5% 5% 5%;
+}
+
+.experienceJobtitle h2{
+
+}
+.experienceJobtitle h2 span{
+    text-align: right;
+
+}
+
+.experienceJobtitle h4{
+
+}
+
+.experienceJobtitle p{
+
+}
