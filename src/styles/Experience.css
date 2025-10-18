@@ -12,8 +12,10 @@
 }
 
 .experienceImage {
-    justify-items: center;
-    align-content: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .experienceImage img{
     width: 80%;
@@ -23,18 +25,29 @@
     margin: 5% 5% 5% 5%;
 }
 
+.experienceJobtitle {
+    display: flex;
+    justify-content: space-between;
+}
+
 .experienceJobtitle h2{
-
-}
-.experienceJobtitle h2 span{
-    text-align: right;
-
+    font: 100;
 }
 
-.experienceJobtitle h4{
+.experienceJobtitle h5{
+    font: 100;
+}
+
+.experienceJobDescription h4{
+    font: 100;
 
 }
 
 .experienceJobtitle p{
+    font-size: x-large;
 
+}
+
+.experienceTitle {
+    font-size: xx-large;
 }

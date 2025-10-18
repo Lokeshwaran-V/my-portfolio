@@ -9,13 +9,18 @@ export default function Experience() {
         <div className="experienceLeftContainer">
             <div className="experienceTitle">Experience</div>
             <div className="experienceImage">
-              <img src={working} alt="Experience" />
+              <>
+                <img src={working} alt="Experience" />
+              </>
             </div>
         </div>
 
         <div className="experienceRightContainer">
             <div className="experienceJobtitle">
-              <h2>Movate Technologies <span>Jun 2024 - Oct 2025</span></h2>
+              <h2>Movate Technologies</h2>
+              <h5>Jun 2024 - Oct 2025</h5>
+            </div>
+            <div className="experienceJobDescription">
               <h4>Frontend Developer</h4>
               <p>- Developed responsive web applications using React.js, JavaScript, and CSS, with an emphasis on mobile-first design.</p>
               <p>- Used React hooks to reduce unnecessary re-renders and enhance app responsiveness.</p>
@@ -25,7 +30,10 @@ export default function Experience() {
               <p>- Optimized initial page load time by 30% through lazy loading, bundling strategies, and image optimization.</p>
             </div><br />
             <div className="experienceJobtitle">
-              <h2>Jasmin Infotech Pvt Ltd <span>Jun 2019 - Jan 2022</span></h2>
+              <h2>Jasmin Infotech Pvt Ltd </h2>
+              <h5>Jun 2019 - Jan 2022</h5>
+            </div>
+            <div className="experienceJobDescription">
               <h4>React Developer</h4>
               <p>- Designed user friendly web applications using React js, HTML, CSS and JavaScript</p>
               <p>- Implemented scalable, component-based architecture is used in applications, producing codebases that are uniform and manageable across projects.</p>
