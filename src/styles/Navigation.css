@@ -1,53 +1,158 @@
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2%;
-    padding: 0 2%;
-    position: sticky;
-    top: 0;
+/* ===========================
+   Block: nav
+=========================== */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2%;
+  padding: 0 2%;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 100;
+  flex-wrap: wrap;
+}
+
+/* Brand */
+.nav__brand {
+  flex: 0 0 auto;
+}
+
+.nav__brand a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Menu */
+.nav__menu {
+  flex: 1 1 auto;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav__item {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: larger;
+  margin: 0 30px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav__item a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav__item a:hover {
+  color: orange;
+}
+
+/* Mode button (desktop) */
+.nav__mode-desktop {
+  display: block;
+}
+
+.nav__mode-button {
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #6366f1;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.nav__mode-button:hover {
+  background-color: #4f46e5;
+}
+
+.nav__mode-button:active {
+  transform: scale(0.95);
+}
+
+/* ===========================
+   Hamburger Menu
+=========================== */
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav__hamburger-line {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation when open */
+.nav__hamburger-line.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.nav__hamburger-line.open:nth-child(2) {
+  opacity: 0;
+}
+.nav__hamburger-line.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+.nav__item--mode {
+    display: none;
+  }
+
+/* ===========================
+   Responsive Design
+=========================== */
+@media (max-width: 768px) {
+  .nav__menu {
+    display: none;
+    width: 100%;
+  }
+
+  .nav__menu.nav__menu--open {
+    display: block;
     background: white;
-    z-index: 100;
-}
+    margin-top: 10px;
+  }
 
-.Home {
-    flex: 0 0 auto;
+  .nav__list {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: flex-start;
     margin: 0;
-    text-decoration: none;
-}
+    padding: 10px 0;
+  }
 
-.Home a {
-    text-decoration: none;
-    color: black;
-}
+  .nav__item {
+    margin: 0;
+  }
 
-.Pages ul {
+  /* Hide desktop mode button */
+  .nav__mode-desktop {
+    display: none;
+  }
+
+  /* Show hamburger */
+  .nav__hamburger {
     display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
-}
-
-.Pages ul li {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: larger;
-    padding: 0;
-    color: black;
-    list-style: none;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    margin: 0 50px;
-    
-}
-.Pages ul li a{
-    text-decoration: none;
-    color: black;
-}
-
-.Pages ul li a:hover {
-    color: orange;
-}
-
-.Mode {
-    margin: 0;
+  }
 }

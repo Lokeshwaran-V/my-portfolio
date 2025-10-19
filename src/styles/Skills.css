@@ -1,79 +1,150 @@
-.SkillsContainer{
-    display: flex;
-    position: relative;
-    justify-content: space-around;
-    margin: 0 5%;
+/* ===========================
+   Block: skills
+=========================== */
+.skills {
+  width: 100%;
+  padding: 8% 5%;
 }
 
-.SkillsLeftContainer {
-    width: 100%;
-    margin: 5% 0 5% 5%;
+.skills__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-.SkillsRightContainer {
-    margin: 5% 5% 5% 0;
-    width: 100%;
-    align-content: center;
+/* ===========================
+   Element: skills__left
+=========================== */
+.skills__left {
+  flex: 1 1 500px;
+  min-width: 300px;
 }
 
-.logos ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: calc(20%);
+.skills__title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-.logos ul li {
-    list-style: none;
-    justify-items: center;
+.skills__description p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
-.logos ul li img{
-    width: 90px;
+/* ===========================
+   Element: skills__progress
+=========================== */
+.skills__progress {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
-.description {
-    border-right: 2px solid orange;
-    align-content: center;
-    align-items: center;
+.skills__progress-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1 1 200px;
 }
 
-.skillProgress {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.skillProgress .child{
-    display: inline-flex;
-    align-items: center;
-
+.skills__progress-item img {
+  width: 75px;
 }
 
-.skillProgress .child img {
-    width: 75px;
-}
-
-.skillProgress .child progress {
-  /* width: 100%; */
-  height: 25%;
+.skills__progress-item progress {
+  width: 100%;
+  height: 20px;
   appearance: none;
 }
 
-/* Progress bar background */
-.skillProgress .child progress::-webkit-progress-bar {
-  background-color: white;
+/* Webkit progress bar */
+.skills__progress-item progress::-webkit-progress-bar {
+  background-color: #f3f3f3;
   border-radius: 10px;
-  border: 1px solid black;
+  border: 1px solid #ccc;
 }
 
-/* Progress value (filled part) */
-.skillProgress .child progress::-webkit-progress-value {
-  background-color: rgb(89, 245, 45);
+.skills__progress-item progress::-webkit-progress-value {
+  background-color: #59f52d;
   border-radius: 10px;
 }
 
-/* Firefox support */
-.skillProgress .child progress::-moz-progress-bar {
-  background-color: green;
+/* Firefox progress bar */
+.skills__progress-item progress::-moz-progress-bar {
+  background-color: #59f52d;
   border-radius: 10px;
+}
+
+/* ===========================
+   Element: skills__right
+=========================== */
+.skills__right {
+  flex: 1 1 300px;
+  min-width: 200px;
+}
+
+.skills__logos-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills__logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.skills__logo-item img {
+  width: 90px;
+  margin-bottom: 10px;
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+@media (max-width: 1024px) {
+  .skills__title h2 {
+    font-size: 2rem;
+  }
+
+  .skills__progress-item img {
+    width: 60px;
+  }
+
+  .skills__logos-list {
+    gap: 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .skills__progress {
+    flex-direction: column;
+  }
+
+  .skills__progress-item {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .skills__logos-list {
+    gap: 10%;
+  }
+
+  .skills__logo-item img {
+    width: 70px;
+  }
 }

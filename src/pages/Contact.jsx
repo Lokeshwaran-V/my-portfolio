@@ -1,8 +1,5 @@
-
-import React from "react";
-import { useState } from "react";
-// import { Button } from "@/components/ui/button";
-// import { Switch } from "@/components/ui/switch";
+import React, { useState } from "react";
+import "../styles/Contact.css";
 
 export default function Contact() {
   const [mode, setMode] = useState("mail");
@@ -17,32 +14,34 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background to-muted p-4">
-      <div className="w-full max-w-md">
-        <div className="bg-card rounded-lg shadow-lg p-8 border border-border">
-          <h1 className="text-3xl font-bold text-foreground mb-2">
-            Get in Touch
-          </h1>
-          <p className="text-muted-foreground mb-6">
-            Choose your preferred contact method
-          </p>
+    <div className="contact">
+      <div className="contact__wrapper">
+        <div className="contact__card">
+          <h1 className="contact__title">Get in Touch</h1>
+          <p className="contact__subtitle">Choose your preferred contact method</p>
 
-          <div className="flex items-center gap-4 mb-8">
+          <div className="contact__toggle">
             <span
-              className={`text-sm font-medium ${
-                mode === "mail" ? "text-foreground" : "text-muted-foreground"
+              className={`contact__toggle-label ${
+                mode === "mail" ? "contact__toggle-label--active" : ""
               }`}
             >
               Mail
             </span>
-            <Switch
-              checked={mode === "message"}
-              onCheckedChange={handleToggle}
-              aria-label="Toggle between Mail and Message"
-            />
+
+            <label className="contact__switch">
+              <input
+                type="checkbox"
+                className="contact__switch-input"
+                checked={mode === "message"}
+                onChange={(e) => handleToggle(e.target.checked)}
+              />
+              <span className="contact__switch-slider"></span>
+            </label>
+
             <span
-              className={`text-sm font-medium ${
-                mode === "message" ? "text-foreground" : "text-muted-foreground"
+              className={`contact__toggle-label ${
+                mode === "message" ? "contact__toggle-label--active" : ""
               }`}
             >
               Message
@@ -50,71 +49,57 @@ export default function Contact() {
           </div>
 
           {mode === "mail" && (
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <input
-                  type="text"
-                  placeholder="Enter your name"
-                  required
-                  className="w-full px-4 py-2 border border-input rounded-md bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                />
-              </div>
-              <div>
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  required
-                  className="w-full px-4 py-2 border border-input rounded-md bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                />
-              </div>
-              <div>
-                <input
-                  type="text"
-                  placeholder="Subject"
-                  required
-                  className="w-full px-4 py-2 border border-input rounded-md bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                />
-              </div>
-              <div>
-                <textarea
-                  placeholder="Hi there!"
-                  rows={5}
-                  className="w-full px-4 py-2 border border-input rounded-md bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-                />
-              </div>
-              <Button type="submit" className="w-full">
+            <form onSubmit={handleSubmit} className="contact__form">
+              <input
+                type="text"
+                placeholder="Enter your name"
+                required
+                className="contact__input"
+              />
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                required
+                className="contact__input"
+              />
+              <input
+                type="text"
+                placeholder="Subject"
+                required
+                className="contact__input"
+              />
+              <textarea
+                placeholder="Hi there!"
+                rows={5}
+                className="contact__textarea"
+              ></textarea>
+              <button type="submit" className="contact__button">
                 Send Email
-              </Button>
+              </button>
             </form>
           )}
 
           {mode === "message" && (
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <input
-                  type="tel"
-                  placeholder="Enter your mobile number"
-                  className="w-full px-4 py-2 border border-input rounded-md bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                />
-              </div>
-              <div>
-                <input
-                  type="text"
-                  placeholder="Subject"
-                  required
-                  className="w-full px-4 py-2 border border-input rounded-md bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                />
-              </div>
-              <div>
-                <textarea
-                  placeholder="Hi there!"
-                  rows={5}
-                  className="w-full px-4 py-2 border border-input rounded-md bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-                />
-              </div>
-              <Button type="submit" className="w-full">
+            <form onSubmit={handleSubmit} className="contact__form">
+              <input
+                type="tel"
+                placeholder="Enter your mobile number"
+                className="contact__input"
+              />
+              <input
+                type="text"
+                placeholder="Subject"
+                required
+                className="contact__input"
+              />
+              <textarea
+                placeholder="Hi there!"
+                rows={5}
+                className="contact__textarea"
+              ></textarea>
+              <button type="submit" className="contact__button">
                 Send Message
-              </Button>
+              </button>
             </form>
           )}
         </div>

@@ -1,37 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Navigation.css";
 
 export default function Navigation() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <nav>
-      <div className="Home" id="Home">
+    <nav className="nav">
+      <div className="nav__brand" id="Home">
         <h1>
           <a href="#">Portfolio</a>
         </h1>
       </div>
 
-      <div className="Pages" id="Pages">
-        <ul>
-          <li className="About">
+      {/* Hamburger Button */}
+      <button
+        className="nav__hamburger"
+        aria-label="Toggle menu"
+        onClick={toggleMenu}
+      >
+        <span className={`nav__hamburger-line ${menuOpen ? "open" : ""}`}></span>
+        <span className={`nav__hamburger-line ${menuOpen ? "open" : ""}`}></span>
+        <span className={`nav__hamburger-line ${menuOpen ? "open" : ""}`}></span>
+      </button>
+
+      {/* Menu */}
+      <div className={`nav__menu ${menuOpen ? "nav__menu--open" : ""}`} id="Pages">
+        <ul className="nav__list">
+          <li className="nav__item nav__item--about">
             <a href="#About">About Me</a>
           </li>
-          <li className="Skills">
+          <li className="nav__item nav__item--skills">
             <a href="#Skills">Skills</a>
           </li>
-          <li className="Experiences">
+          <li className="nav__item nav__item--experiences">
             <a href="#Experiences">Experiences</a>
           </li>
-          <li className="Projects">
+          <li className="nav__item nav__item--projects">
             <a href="#Projects">Projects</a>
           </li>
-          <li className="Contact">
-            <a href="Contact">Contact</a>
+          <li className="nav__item nav__item--contact">
+            <a href="#Contact">Contact</a>
+          </li>
+          <li className="nav__item nav__item--mode">
+            <button className="nav__mode-button">Mode</button>
           </li>
         </ul>
       </div>
 
-      <div className="Mode" id="Mode">
-        <button>Mode</button>
+      {/* Desktop Mode button */}
+      <div className="nav__mode-desktop">
+        <button className="nav__mode-button">Mode</button>
       </div>
     </nav>
   );
