@@ -18,12 +18,9 @@
 /* ===========================
    Base Reset
 =========================== */
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
@@ -34,7 +31,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10% 5%;
+  padding: 5%;
   width: 100%;
 }
 
@@ -51,7 +48,7 @@
 =========================== */
 .about__text {
   font-family: "Alterday";
-  font-size: 60px;
+  font-size: 50px;
   color: #111827;
 }
 
@@ -70,7 +67,7 @@
 =========================== */
 .about__name {
   font-family: "FortalesiaScript";
-  font-size: 250px;
+  font-size: 200px;
 }
 
 /* ===========================
