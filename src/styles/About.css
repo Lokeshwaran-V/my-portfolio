@@ -90,6 +90,9 @@
   .about {
     flex-direction: column;
   }
+  .about__left {
+    padding: 10% 0;
+  }
   .about__text {
     font-size: 32px;
     text-align: center;

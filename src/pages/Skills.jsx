@@ -60,7 +60,6 @@ export default function Skills() {
         </div>
 
         <div className="skills__right">
-          <div className="skills__logos">
             <ul className="skills__logos-list">
               <li className="skills__logo-item" data-aos="fade-up" data-aos-duration="600">
                 <img src={HTML} alt="HTML" />
@@ -84,7 +83,6 @@ export default function Skills() {
               </li>
             </ul>
           </div>
-        </div>
       </div>
     </section>
   );
