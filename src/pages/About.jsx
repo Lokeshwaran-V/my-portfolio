@@ -25,7 +25,7 @@ export default function About() {
             data-aos-duration="1200"
             className="about__text about__text--experience"
           >
-            with 4+ years of expertise in React Js.
+            4+ years of expertise in React Js.
           </p>
         </div>
       </div>
