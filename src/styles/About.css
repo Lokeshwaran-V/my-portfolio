@@ -91,10 +91,10 @@
     flex-direction: column;
   }
   .about__text {
-    font-size: 35px;
+    font-size: 32px;
     text-align: center;
   }
   .about__name {
-    font-size: 90px;
+    font-size: 87px;
   }
 }
