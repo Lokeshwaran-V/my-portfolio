@@ -1,7 +1,7 @@
 import Navigation from "./components/Navigation";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Experience from "./pages/Experience";
+import Experiences from "./pages/Experiences";
 import Project from "./pages/Project";
 import Skills from "./pages/Skills";
 
@@ -11,9 +11,9 @@ function App() {
       <Navigation />
       <About />
       <Skills />
-      {/* <Experience />
-      <Project />
-      <Contact /> */}
+      <Experiences />
+      {/* <Project /> */}
+      {/* <Contact /> */}
     </>
   );
 }

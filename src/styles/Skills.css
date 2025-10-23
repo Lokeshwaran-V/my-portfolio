@@ -16,8 +16,8 @@
    Element: skills__left
 =========================== */
 .skills__left {
-  width: 65%;
-  padding: 10% 2%;
+  width: 60%;
+  padding: 5% 0 5% 2%;
 }
 
 .skills__title h2 {
@@ -27,6 +27,7 @@
 
 .skills__description {
   border-right: 2px solid orange;
+  width: 95%;
 }
 .skills__description p {
   font-size: 1.2rem;
@@ -38,6 +39,7 @@
 =========================== */
 .skills__progress {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 2%;
   justify-content: space-evenly;
 }
@@ -81,7 +83,7 @@
 .skills__right {
   width: 35%;
   align-content: center;
-  padding: 10% 2%;
+  padding: 10% 2% 10% 0;
 }
 
 .skills__logos-list {
@@ -92,7 +94,7 @@
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 15%;
+  gap: 20%;
 }
 
 .skills__logo-item {
@@ -125,20 +127,17 @@
 }
 
 @media (max-width: 768px) {
-  .skills__left {
-    /* width: 65%; */
-    
-  }
   .skills__container {
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
+    width: 99%;
+    justify-items: center;
   }
 
   .skills__left{
-    width: 100%;
+    width: 95%;
     border-bottom: 2px solid orange;  
-    padding: 10% 0; 
+    padding: 10% 2%; 
 
   }
 
@@ -170,8 +169,8 @@
   }
 
   .skills__right{
-    width: 100%;
-    padding: 10% 0;
+    width: 95%;
+    padding: 10% 2%;
     
   }
 

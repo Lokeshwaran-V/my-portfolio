@@ -5,12 +5,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2%;
+  padding: 1%;
   position: sticky;
   top: 0;
   background: white;
   z-index: 1;
   flex-wrap: wrap;
+  width: 95%;
 }
 
 /* Brand */
@@ -28,6 +29,7 @@
 /* Menu */
 .nav__menu {
   flex: 1 1 auto;
+  transition: all 0.3s ease;
 }
 
 .nav__list {
@@ -37,6 +39,7 @@
   padding: 0;
   list-style: none;
   flex-wrap: wrap;
+  transition: all 0.3s ease;
 }
 
 .nav__item {
@@ -105,12 +108,14 @@
 /* Hamburger animation when open */
 .nav__hamburger-line.open:nth-child(1) {
   transform: rotate(45deg);
+  translate: 0px 5px;
 }
 .nav__hamburger-line.open:nth-child(2) {
   opacity: 0;
 }
 .nav__hamburger-line.open:nth-child(3) {
   transform: rotate(-45deg);
+  translate: 0px -5px;
 }
 .nav__item--mode {
     display: none;
@@ -120,15 +125,20 @@
    Responsive Design
 =========================== */
 @media (max-width: 768px) {
+  .nav {
+    width: 95%;
+  }
   .nav__menu {
     display: none;
-    width: 100%;
+    width: 95%;
+    /* transition: all 0.3s ease; */
   }
 
   .nav__menu.nav__menu--open {
     display: block;
     background: white;
     margin-top: 10px;
+    /* transition: all 0.3s ease; */
   }
 
   .nav__list {

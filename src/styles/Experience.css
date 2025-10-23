@@ -3,7 +3,7 @@
 =========================== */
 .experience {
   width: 100%;
-  padding: 5% 5%;
+  
 }
 
 /* ===========================
@@ -12,18 +12,18 @@
 .experience__container {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 40px;
+  
+  /* flex-wrap: wrap; */
 }
 
 /* ===========================
    Left Section
 =========================== */
 .experience__left {
-  flex: 1 1 300px;
-  min-width: 250px;
   border-right: 2px solid orange;
-  padding-right: 20px;
+  padding: 2%;
+  width: 30%;
+  align-content: center;
 }
 
 .experience__title {
@@ -39,20 +39,19 @@
 }
 
 .experience__image img {
-  width: 80%;
-  max-width: 300px;
+  width: 90%;
 }
 
 /* ===========================
    Right Section
 =========================== */
 .experience__right {
-  flex: 2 1 500px;
-  min-width: 300px;
+  padding: 2%;
+  width: 65%;
 }
 
 .experience__job {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .experience__job-header {
@@ -69,11 +68,11 @@
 
 .experience__job-duration {
   font-size: 1rem;
-  color: #6b7280;
+  color: #3b3f46;
 }
 
 .experience__job-title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 10px;
   font-weight: 600;
 }
@@ -114,15 +113,17 @@
   .experience__left {
     border-right: none;
     border-bottom: 2px solid orange;
-    padding-right: 0;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    padding: 5% 2%;
+    justify-items: center;
+    width: 95%;
+  }
+  .experience__right {
+    width: 95%;
+
   }
 
   .experience__job-header {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
   }
 
   .experience__job-company {
@@ -134,7 +135,6 @@
   }
 
   .experience__image img {
-    width: 60%;
-    max-width: 200px;
+    width: 80%;
   }
 }

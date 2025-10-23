@@ -39,8 +39,9 @@
    Element: about__left
 =========================== */
 .about__left {
-  width: 100%;
+  width: 90%;
   padding: 10% 2%;
+  justify-items: center;
 }
 
 
@@ -49,18 +50,18 @@
 =========================== */
 .about__text {
   font-family: "Alterday";
-  font-size: 50px;
+  font-size: 70px;
   color: #111827;
 }
 
 /* Modifier: intro text */
 .about__text--intro {
-  text-align: left;
+  text-align: center;
 }
 
 /* Modifier: experience text */
 .about__text--experience {
-  text-align: right;
+  text-align: center;
 }
 
 /* ===========================
@@ -68,7 +69,7 @@
 =========================== */
 .about__name {
   font-family: "FortalesiaScript";
-  font-size: 200px;
+  font-size: 225px;
 }
 
 /* ===========================

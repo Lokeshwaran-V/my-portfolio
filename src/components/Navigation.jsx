@@ -8,6 +8,10 @@ export default function Navigation() {
     setMenuOpen(!menuOpen);
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="nav">
       <div className="nav__brand" id="Home">
@@ -22,28 +26,39 @@ export default function Navigation() {
         aria-label="Toggle menu"
         onClick={toggleMenu}
       >
-        <span className={`nav__hamburger-line ${menuOpen ? "open" : ""}`}></span>
-        <span className={`nav__hamburger-line ${menuOpen ? "open" : ""}`}></span>
-        <span className={`nav__hamburger-line ${menuOpen ? "open" : ""}`}></span>
+        <span
+          className={`nav__hamburger-line ${menuOpen ? "open" : ""}`}
+        ></span>
+        <span
+          className={`nav__hamburger-line ${menuOpen ? "open" : ""}`}
+        ></span>
+        <span
+          className={`nav__hamburger-line ${menuOpen ? "open" : ""}`}
+        ></span>
       </button>
 
       {/* Menu */}
-      <div className={`nav__menu ${menuOpen ? "nav__menu--open" : ""}`} id="Pages">
+      <div
+        className={`nav__menu ${menuOpen ? "nav__menu--open" : ""}`}
+        id="Pages"
+      >
         <ul className="nav__list">
           <li className="nav__item nav__item--about">
-            <a href="#About">About Me</a>
+            <a href="#About" onClick={closeMenu}>
+              About Me
+            </a>
           </li>
           <li className="nav__item nav__item--skills">
-            <a href="#Skills">Skills</a>
+            <a href="#Skills" onClick={closeMenu}>Skills</a>
           </li>
           <li className="nav__item nav__item--experiences">
-            <a href="#Experiences">Experiences</a>
+            <a href="#Experiences" onClick={closeMenu}>Experiences</a>
           </li>
           <li className="nav__item nav__item--projects">
-            <a href="#Projects">Projects</a>
+            <a href="#Projects" onClick={closeMenu}>Projects</a>
           </li>
           <li className="nav__item nav__item--contact">
-            <a href="#Contact">Contact</a>
+            <a href="#Contact" onClick={closeMenu}>Contact</a>
           </li>
           <li className="nav__item nav__item--mode">
             <button className="nav__mode-button">Mode</button>
