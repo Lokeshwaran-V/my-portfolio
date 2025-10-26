@@ -12,6 +12,7 @@
   z-index: 1;
   flex-wrap: wrap;
   width: 95%;
+  margin: auto
 }
 
 /* Brand */
@@ -163,4 +164,43 @@
   .nav__hamburger {
     display: flex;
   }
+}
+
+/* =======================
+   Theme: Light
+======================= */
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light nav {
+  background-color: #f9fafb;
+}
+
+body.light .Mode button {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+/* =======================
+   Theme: Dark
+======================= */
+body.dark {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+body.dark nav {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+body.dark .Mode button {
+  background-color: #4b5563;
+  color: #f9fafb;
+}
+
+html, body, nav, .nav__mode-button {
+  transition: background-color 0.4s ease, color 0.4s ease;
 }

@@ -14,7 +14,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="contact">
+    <div className="contact" id="Contact">
       <div className="contact__wrapper">
         <div className="contact__card">
           <h1 className="contact__title">Get in Touch</h1>
